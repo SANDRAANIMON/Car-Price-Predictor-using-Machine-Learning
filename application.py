@@ -17,7 +17,7 @@ def index():
     fuel_type=car['fuel_type'].unique()
 
     companies.insert(0,'Select Company')
-    return render('index.html',companies=companies, car_models=car_models, years=year,fuel_types=fuel_type)
+    return render_template('index.html',companies=companies, car_models=car_models, years=year,fuel_types=fuel_type)
 
 
 @app.route('/predict',methods=['POST'])
